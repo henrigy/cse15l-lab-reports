@@ -1,21 +1,9 @@
-## Testing markdown
+# CSE 15L Spring 2022 Lab Reports
 
-# smaller heading
+## Henry Liu A16239901
 
-some _italicized_ text
-some **bold** text
-an ordered list
+### Lab Report Links
 
-1. item1
-2. item2
-3. item3
+[Week 1 Lab Report]()
 
-an unordered list
-
-- item1
-- item2
-- item3
-
-an image of a [Mr. Bean](https://www.google.com/search?q=mr.+bean&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjJmqnLuIX3AhVSDkQIHd6FANMQ_AUoAnoECAIQBA&biw=1280&bih=601&dpr=1.5#imgrc=8O5GpnBo9tIx8M)
-
-### I just made some changes
+[Week 2 Lab Report]()
