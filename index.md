@@ -4,6 +4,6 @@
 
 ### Lab Report Links
 
-[Week 1 Lab Report]()
+[Week 1 Lab Report](https://henrigy.github.io/cse15l-lab-reports/lab-report-1-week-2.html)
 
 [Week 2 Lab Report]()
