@@ -1,1 +1,1 @@
-![batray](batray.png)
+![batray](lab1Screenshots/batray.png)
