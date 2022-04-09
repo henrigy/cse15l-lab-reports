@@ -18,10 +18,10 @@ Some basic syntax in markdown is as follows:
 
 An example of the created webpage is as follows:
 
-![webPageCreated](lab2ScreenShots/webPageCreated.png)
+![webPageCreated](lab2Screenshots/webPageCreated.png)
 
 An example of some formatting is as follows:
-![formatting](lab2ScreenShots/formatting.png)
+![formatting](lab2Screenshots/formatting.png)
 
 ## Editing Offline
 
@@ -36,12 +36,12 @@ It is also useful to go through the separate acts of committing changes before p
 Using GitHub Pages will be helpful for publishing our CSE 15L lab reports online in a blog form.
 
 An example of adding a lab report to GitHub Pages is as follows:
-![labReport](lab2ScreenShots/labReport.png)
+![labReport](lab2Screenshots/labReport.png)
 
 Adding links is also particularly useful for navigating between the different lab reports and the landing page.
 
 Two styles and methods which we can link our pages are as follows:
-![links](lab2ScreenShots/links.png)
+![links](lab2Screenshots/links.png)
 
 The first method of linking pages uses a relative path. This means that we are using the existing file path to navigate to the new page. The second method of linking pages uses an absolute path. This means that we are resetting the entire file path with this new file path to access the page.
 
