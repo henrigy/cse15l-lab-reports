@@ -2,7 +2,7 @@
 
 ## Installing Visual Studio Code
 
-Visual Studio Code is a source code editor. Source code editors allow for easy writing and reading of code.
+Visual Studio Code is a source code editor. Source code editors allow for easy writing and reading of code. Visual Studio Code can be downloaded from [https://code.visualstudio.com/](https://code.visualstudio.com/).
 
 ![VScode](lab1Screenshots/VScodeSS.png)
 
