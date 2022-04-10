@@ -16,7 +16,7 @@ This is where you can create a GitHub Page!
 
 Creating a website with GitHub is relatively easy. After creating a new repository, you create a new index.md file. Any additional files only require the .md file type. .md stands for Markdown. Markdown is a simplified language for creating your webpage instead of using the conventional HTML. To make a page, you then go to settings and select "Pages". This should publish your repository and output a URL. To switch between the files that you created, at the end of the URL, type the filename followed by .html.
 
-Some basic syntax in markdown is as follows:
+Some basic syntax in Markdown is as follows:
 
 - #: Heading 1
 - ##: Heading 2
@@ -43,7 +43,7 @@ It is also useful to go through the separate acts of committing changes before p
 Editing offline using Visual Studio Code looks like the following:
 
 ![vscodeSS](lab2Screenshots/vscodeSS.png)
-There is a markdown preview on the right that makes it convenient to instantly see the changes and updates being made to a markdown file.
+There is a Markdown preview on the right that makes it convenient to instantly see the changes and updates being made to a Markdown file.
 
 GitHub Desktop is another useful tool used in conjunction with Visual Studio Code to quickly download code from a repository and to upload any changes.
 
