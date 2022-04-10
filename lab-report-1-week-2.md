@@ -3,6 +3,7 @@
 ## Installing Visual Studio Code
 
 Visual Studio Code is a source code editor. Source code editors allow for easy writing and reading of code.
+
 ![VScode](lab1Screenshots/VScodeSS.png)
 
 ## Remotely Connecting
@@ -14,6 +15,7 @@ To remotely connect to UCSD's servers, perform the following steps:
 3. Use the command ssh cs15lsp22agp@ieng6.ucsd.edu to login to UCSD's server
 
 A successful login looks like the following:
+
 ![sshSuccessfulLogin](lab1Screenshots/sshSuccessfulLogin.png)
 
 ## Trying Some Commands
@@ -29,6 +31,7 @@ Some of the commands ran and their functionalities were:
 - exit: terminates the remote session
 
 An example of the ls command is as follows:
+
 ![lsCommand](lab1Screenshots/lsCommand.png)
 
 ## Moving Files with scp
@@ -37,10 +40,12 @@ The command scp is used to move files from the local machine to the remote serve
 
 A successful copy of the files from the local machine copied to the remote server looks as follows:
 
-The file was successfully transferred from the local machine
+The file was successfully transferred from the local machine:
+
 ![transferInfo](lab1Screenshots/sshTransferInfo.png)
 
-The file shows up in our remote server's directory
+The file shows up in our remote server's directory:
+
 ![sshTransfer](lab1Screenshots/sshTransfer.png)
 
 The difference in output when running commands in ssh versus the local computer is the working directory path. In the local computer, the user is "henry". When working in the remote server, the user is "cs15lsp22apg@ieng6-201".
@@ -60,6 +65,7 @@ Steps to set up an SSH key:
 5. On your own computer, copy the public key into the .ssh directory on the server using scp
 
 A successful login without having to use a password is as follows:
+
 ![loginNoPass](lab1Screenshots/loginNoPass.png)
 
 This can now save the user a lot of time. Previously, we saw that copying numerous files could be a time intensive task. Now, with public keys, the time spent copying files and logging in is significantly expedited.
@@ -69,4 +75,5 @@ This can now save the user a lot of time. Previously, we saw that copying numero
 Multiple terminal commands can also be written on the same line to save time and for convenience. This is done by using quotes on commands following the ssh command. Semicolons between multiple commands is another viable option. Using the up-arrow key on the user's keyboard also allows for quick and easy access to previous terminal commands.
 
 Below is an example of performing the ssh, javac, and java commands all in the same line in the terminal. This line of code creates the remote connection to a UCSD server, compiles WhereAmI.java, and then runs WhereAmI.java.
+
 ![whereAmI](lab1Screenshots/whereAmI.png)
