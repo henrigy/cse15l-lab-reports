@@ -1,11 +1,13 @@
 # Week 1 - Lab 1
 
-## Visual Studio Code
+## Installing Visual Studio Code
 
 Visual Studio Code is a source code editor. Source code editors allow for easy writing and reading of code.
 ![VScode](lab1Screenshots/VScodeSS.png)
 
 ## Remotely Connecting
+
+To remotely connect to UCSD's servers, perform the following steps:
 
 1. Install OpenSSH
 2. Look up CSE15L account
@@ -14,7 +16,7 @@ Visual Studio Code is a source code editor. Source code editors allow for easy w
 A successful login looks like the following:
 ![sshSuccessfulLogin](lab1Screenshots/sshSuccessfulLogin.png)
 
-## Run Some Commands
+## Trying Some Commands
 
 Some of the commands ran and their functionalities were:
 
@@ -26,7 +28,10 @@ Some of the commands ran and their functionalities were:
 - rm -r: removes the directory named at the end of the command
 - exit: terminates the remote session
 
-## Moving Files Over SSH with SCP
+An example of the ls command is as follows:
+![lsCommand](lab1Screenshots/lsCommand.png)
+
+## Moving Files with scp
 
 The command scp is used to move files from the local machine to the remote server.
 
@@ -42,7 +47,7 @@ The difference in output when running commands in ssh versus the local computer 
 
 Entering the password for each time a file is copied over is also quite tedious and takes me a couple of minutes.
 
-## SSH Keys
+## Setting an SSH Key
 
 SSH keys allow for our computers to store private and public keys that allow us to use files as our passwords. This helps to save users' time by not having to enter their passwords each time when connecting remotely or copying over files. This solution uses a program called ssh-keygen. A private and public key are generated on the local computer. The public key is copied over to the remote server.
 
@@ -51,7 +56,7 @@ A successful login without having to use a password is as follows:
 
 This can now save the user a lot of time. Previously, we saw that copying numerous files could be a time intensive task. Now, with public keys, the time spent copying files and logging in is significantly expedited.
 
-## Making Remote Running Even More Pleasant
+## Optimizing Remote Running
 
 Multiple terminal commands can also be written on the same line to save time and for convenience. This is done by using quotes on commands following the ssh command. Semicolons between multiple commands is another viable option. Using the up-arrow key on the user's keyboard also allows for quick and easy access to previous terminal commands.
 
