@@ -29,6 +29,7 @@ Some of the commands ran and their functionalities were:
 - exit: terminates the remote session
 
 An example of the ls command is as follows:
+
 ![lsCommand](lab1Screenshots/lsCommand.png)
 
 ## Moving Files with scp
