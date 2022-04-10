@@ -51,6 +51,14 @@ Entering the password for each time a file is copied over is also quite tedious 
 
 SSH keys allow for our computers to store private and public keys that allow us to use files as our passwords. This helps to save users' time by not having to enter their passwords each time when connecting remotely or copying over files. This solution uses a program called ssh-keygen. A private and public key are generated on the local computer. The public key is copied over to the remote server.
 
+Steps to set up an SSH key:
+
+1. On your own computer (not the remote connection) enter ssh-keygen
+2. When prompted to enter a passphrase, hit enter (x2)
+3. Copy over the public key stored in the .ssh directory in your computer onto the server
+4. On the server, create a .ssh directory using mkdir .ssh and then logout
+5. On your own computer, copy the public key into the .ssh directory on the server using scp
+
 A successful login without having to use a password is as follows:
 ![loginNoPass](lab1Screenshots/loginNoPass.png)
 
