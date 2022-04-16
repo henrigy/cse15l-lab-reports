@@ -70,7 +70,7 @@ This issue was resolved with a conditional that would break the while loop if th
 
 
 A test file where a link had no associated title
-![file3](lab3ScreenShots/file3.png)
+![file3](lab3Screenshots/file3.png)
 
 
 This issue was resolved with another conditional that would change the indexOf starting index value to that of currentIndex if the indices of the open and closed square brackets could not be found. This link with no title would still be added to the returned array of links.
