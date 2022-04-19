@@ -1,4 +1,4 @@
-# Week 3 - Lab 3
+# Week 4: Lab Report 2
 
 ## Pair Programming
 

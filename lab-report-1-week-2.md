@@ -1,4 +1,4 @@
-# Week 1 - Lab 1
+# Week 2: Lab Report 1
 
 ## Installing Visual Studio Code
 
