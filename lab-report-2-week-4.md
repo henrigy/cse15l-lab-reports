@@ -1,80 +1,68 @@
 # Week 4: Lab Report 2
 
-## Pair Programming
+## Incremental Development Programming
+In programming, incremental development is a programming method emphasizing the repeated cycle of coding and testing every 10-15 lines of code.
 
-![pairProgramming](lab3Screenshots/pairProgramming.jpeg)
+This allows for programmers to catch mistakes in their code quickly and when the code is still early in its development. Programmers should always thoroughly test their code and to find ways to break their code.
 
-Pair programming is a software development technique where two individuals code together on the same workstation. Usually, one individual will do the coding while the other watches and gives suggestions and advice. Some common and courteous pair programming norms that should be practiced and implemented include:
-
-- Not being a backseat driver
-- To not be bossy
-- Switch roles often
-- Make suggestions ahead of time
-- Do not insult your partner
-
-
-## Getting Started
-When programming, it is quite common to look up things on the internet. Programmers should not be afraid to use the internet as a resource. Just make sure to cite your sources! 
-
-![YouTubeSS](lab3Screenshots/YouTubeSS.png)
-
-When watching the YouTube video [Markdown Parsing Starter Code](https://www.youtube.com/watch?v=k67e-Icw4ug), we kept track of some of the following statistics:
-
-- The programmer use the internet once to look up information pertaining to the program being coded.
-- The programmer writes about 10-13 lines of code between runs of the program.
-- The programmer uses autocomplete once or twice every line (using tab). This would help avoid a typo in every single line of code with a variable name in it. This would especially helpful for variables that are similar in name and spelling.
-
-## Getting and Running the Code
-
-Creating a fork in GitHub allows for programmers to create a copy of a remote repository on your local machine without impacting the remote or parent repository. This allows for programmers to freely experiment with changes without affect the remote repository. 
-
-![githubSS](lab3Screenshots/githubSS.png)
-
-
-Forking the repository should and can be done using GitHub Desktop and opened in Visual Studio Code.
-
-In this lab, we forked a repository that parses Markdown files and lists the links that were contained in the file.
-
-After running javac MarkdownParse.java and java MarkdownParse test-file.md on our forked repository, we found the following:
-- The 3 different currentIndex values are 0, 41, and 67.
-- The purpose of the second argument to indexOf is to specify the index for a desired character. Without it, the while loop would constantly search from the start of the string and not increment the location of the parentheses and the brackets.
-
-## Finding a Breaking Test
-
-Programmers should always thoroughly test their code and to find ways to break their code. This repeated process helps programmers continually improve their code and to increase their efficiency. 
-
-The forked repository and its code are not implemented to perfection. One case that we found to break the coded was when there is an extra line at the end of the Markdown file. 
+From ["How to Debug"](https://blog.regehr.org/archives/199), two important terms in debugging code are the following:
+- Symptom: "a faulty program behavior that you can see, such as crashing or producing the wrong answer"
+- Bug: "a flaw in a computer system that have zero or more symptoms"
+- Failure-Inducing Input: "input to the program that causes the bug to execute and symptoms to appear. In some cases, capturing the complete failure-inducing input is hard because it may include window system events, hardware-level events like interrupts or bit-flips in RAM cells, and OS-level events like context switches and TCP timeouts. The times at which elements of the input occur may be important"
 
 ![](lab3Screenshots/file1.png)
 
+## Finding A Breaking Test
+In Lab 3, we were tasked with designing test files that would break the Markdown parser program that we forked from [https://github.com/nidhidhamnani/markdown-parser](https://github.com/nidhidhamnani/markdown-parser).
 
-We then committed this file that breaks this code. Making a commit with a file that breaks the code will be helpful for future debugging and to suggest edits to the remote repository's owner. It would help a staff member who is reviewing the original code to quickly reference the test case that is not working. So, in summary, it will help speed up the efficiency of debugging code, compile test files that break the code and so that corrections can be made quickly, and submitting to a public forum such as GitHub also allows for others to add their suggestions.
+### Test 1:
+In the [first breaking test file](https://github.com/henrigy/markdown-parser/commit/75b3a682c274fe986d6a260f09a463bb7ce7a739), our failure-inducing input was an extra line added to the end of the Markdown file. The symptom was not having the correct output printed out and receiving an error with heap space. The bug was an infinite loop from MarkdownParse.java's while loop.
 
-## Improving the Program
+The command line error:
 
-To fix the infinite loop, my pair programming partner Branden Sioson made the realization that the currentIndex would never increment to a value greater than the markdown.length(). To resolve this, we decided to create a conditional checking for if the currentIndex would be within a certain range of markdown.length(). If it was, then we would break out of the while loop to prevent an infinite loop. 
+![error1](lab3Screenshots/error1.png)
+
+To fix this issue, we added a conditional for when the currentIndex is within a certain range of markdown.length() to break out of the while loop. This helps solve the issue of the program not having a condition to handle when the currentIndex is on an empty line.
+
+The updated MarkdownParse.java:
+
+![updated1](lab3Screenshots/updatedError1.png)
+
+The working command line for this breaking test and previous files:
+
+![working1](lab3Screenshots/working1.png);
+
+### Test 2:
+In the [second breaking test file](https://github.com/henrigy/markdown-parser/commit/76cf945592be8639a387d57dae45db7684e336f2), our failure-inducing input was leaving out the link for a given title in the Markdown file. The symptom was not having the correct output printed out and receiving an error with heap space. The bug was an infinite loop from MarkdownParse.java's while loop.
+
+The command line error:
+
+![error2](lab3Screenshots/error2.png)
+
+To fix this issue, we added a conditional to break out of the while loop when the next set of closed and open parentheses could not be located on the file. This helped solve the issue of the program not having a condition to handle when there was no next link to look for and add to the output string.
+
+The updated MarkdownParse.java
+
+![updated2](lab3Screenshots/updatedError2.png)
+
+The working command line for this breaking test and previous files:
+
+![working2](lab3Screenshots/working2.png);
 
 
-![fixInfiniteLoop](lab3Screenshots/fixedInfiniteLoop.png)
+### Test 3:
+In the [third breaking test file](https://github.com/henrigy/markdown-parser/commit/287dad48c71d1277d98c2d39915a3cfc0dce60ef), our failure-inducing input was leaving out the title for a given link in the Markdown file. The symptom was not having the correct output printed out and receiving an error with heap space. The bug was an infinite loop from MarkdownParse.java's while loop.
 
+The command line error:
 
-## Repeating the Process
-Two additional test files that broke our code included the following:
+![error3](lab3Screenshots/error3.png)
 
-A test file where a title had no link attached
-![file2](lab3Screenshots/file2.png)
+To fix this issue, we added a conditional to break out of the while loop when the next set of closed and open brackets could not be found on the file. When this was the case, we would still search for the next link, if any, and add it to our output string.
 
+The updated MarkdownParse.java
 
-This issue was resolved with a conditional that would break the while loop if the indices of the open and closed parentheses could not be found. This title's non-existent link would not be added to the list returned by the getLinks method.
-![fixedNoLink](lab3Screenshots/fixedNoLink.png)
+![updated3](lab3Screenshots/updatedError3.png)
 
+The working command line for this breaking test and previous files:
 
-A test file where a link had no associated title
-![file3](lab3Screenshots/file3.png)
-
-
-This issue was resolved with another conditional that would change the indexOf starting index value to that of currentIndex if the indices of the open and closed square brackets could not be found. This link with no title would still be added to the returned array of links.
-![fixedNoTitle](lab3Screenshots/fixedLinkOnly.png)
-
-
-Some techniques we used to figure out how to fix the program were to analyze each line of code to find out, in depth, its meaning and functionality. This included searching the definition of indexOf and what is second argument's purpose was. to fix the case with no link, Brendan suggested that we just not add it. this would occur when the indexOf the open and closed parentheses would be equal to -1. When this happens we created a conditional that broke the while loop when this happened. As for when there was no title associated with a link, I created another conditional that found the index of the open and closed parentheses when the known index of the closed and open brackets as they would evaluate to -1.
+![working3](lab3Screenshots/working3.png);
