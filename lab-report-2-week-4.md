@@ -16,7 +16,7 @@ From ["How to Debug"](https://blog.regehr.org/archives/199), two important terms
 In Lab 3, we were tasked with designing test files that would break the Markdown parser program that we forked from [https://github.com/nidhidhamnani/markdown-parser](https://github.com/nidhidhamnani/markdown-parser).
 
 ### Test 1:
-In the [first breaking test file](https://github.com/henrigy/markdown-parser/commit/75b3a682c274fe986d6a260f09a463bb7ce7a739), our failure-inducing input was an extra line added to the end of the Markdown file. The symptom was not having the correct output printed out and receiving an error with heap space. The bug was an infinite loop from MarkdownParse.java's while loop.
+In the [first breaking test file](https://github.com/henrigy/markdown-parser/commit/75b3a682c274fe986d6a260f09a463bb7ce7a739), our failure-inducing input was an extra line added to the end of the Markdown file. The symptom was not having the correct output printed out and receiving an error with heap space. The bug was an infinite loop from MarkdownParse.java's while loop caused by missing open and closed parentheses and brackets.
 
 The command line error:
 
@@ -33,13 +33,13 @@ The working command line for this breaking test and previous files:
 ![working1](lab3Screenshots/working1.png);
 
 ### Test 2:
-In the [second breaking test file](https://github.com/henrigy/markdown-parser/commit/76cf945592be8639a387d57dae45db7684e336f2), our failure-inducing input was leaving out the link for a given title in the Markdown file. The symptom was not having the correct output printed out and receiving an error with heap space. The bug was an infinite loop from MarkdownParse.java's while loop.
+In the [second breaking test file](https://github.com/henrigy/markdown-parser/commit/76cf945592be8639a387d57dae45db7684e336f2), our failure-inducing input was leaving out the link for a given title in the Markdown file. The symptom was not having the correct output printed out and receiving an error with heap space. The bug was an infinite loop from MarkdownParse.java's while loop caused by missing open and closed parentheses.
 
 The command line error:
 
 ![error2](lab3Screenshots/error2.png)
 
-To fix this issue, we added a conditional to break out of the while loop when the next set of closed and open parentheses could not be located on the file. This helped solve the issue of the program not having a condition to handle when there was no next link to look for and add to the output string.
+To fix this issue, we added a conditional to break out of the while loop when the next set of closed and open parentheses could not be located on the file. This helped solve the issue of the program not having a condition to handle when there was no next link to look for and add to the output string. We would simply skip to the next line and look for the next title and link pair.
 
 The updated MarkdownParse.java
 
@@ -51,7 +51,7 @@ The working command line for this breaking test and previous files:
 
 
 ### Test 3:
-In the [third breaking test file](https://github.com/henrigy/markdown-parser/commit/287dad48c71d1277d98c2d39915a3cfc0dce60ef), our failure-inducing input was leaving out the title for a given link in the Markdown file. The symptom was not having the correct output printed out and receiving an error with heap space. The bug was an infinite loop from MarkdownParse.java's while loop.
+In the [third breaking test file](https://github.com/henrigy/markdown-parser/commit/287dad48c71d1277d98c2d39915a3cfc0dce60ef), our failure-inducing input was leaving out the title for a given link in the Markdown file. The symptom was not having the correct output printed out and receiving an error with heap space. The bug was an infinite loop from MarkdownParse.java's while loop caused by missing open and closed brackets.
 
 The command line error:
 
