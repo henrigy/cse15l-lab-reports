@@ -65,4 +65,4 @@ The updated MarkdownParse.java
 
 The working command line for this breaking test and previous files:
 
-![working3](lab3Screenshots/working3V2.png);
+![working3](lab3Screenshots/working3V2.png)
