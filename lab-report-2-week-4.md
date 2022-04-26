@@ -51,18 +51,18 @@ The working command line for this breaking test and previous files:
 
 
 ### Test 3:
-In the [third breaking test file](https://github.com/henrigy/markdown-parser/commit/287dad48c71d1277d98c2d39915a3cfc0dce60ef), our failure-inducing input was leaving out the title for a given link in the Markdown file. The symptom was not having the correct output printed out and receiving an error with heap space. The bug was an infinite loop from MarkdownParse.java's while loop caused by missing open and closed brackets.
+In the [third breaking test file](https://github.com/henrigy/markdown-parser/commit/287dad48c71d1277d98c2d39915a3cfc0dce60ef), our failure-inducing input was leaving out the title for a given link in the Markdown file. The symptom was not having the correct output printed out - where we only print out the first two valid links - and receiving an error with heap space. The bug was an infinite loop from MarkdownParse.java's while loop caused by missing open and closed brackets.
 
 The command line error:
 
 ![error3](lab3Screenshots/error3.png)
 
-To fix this issue, we added a conditional to break out of the while loop when the next set of closed and open brackets could not be found on the file. When this was the case, we would still search for the next link, if any, and add it to our output string.
+To fix this issue, we added to the conditional statement we created from the previous iteration of our MarkdownParse.java to break out of the while loop if the next set of closed and open brackets or parentheses could not be found. This is because a link with no title is an invalid link in Markdown. When this was the case we would like to stop looking for the next set of parentheses or brackets as this is at the end of the Markdown file. The link with no title does no need to be added to the output string.
 
 The updated MarkdownParse.java
 
-![updated3](lab3Screenshots/updatedError3.png)
+![updated3](lab3Screenshots/updatedError3V2.png)
 
 The working command line for this breaking test and previous files:
 
-![working3](lab3Screenshots/working3.png);
+![working3](lab3Screenshots/working3V2.png);
