@@ -57,7 +57,7 @@ The command line error:
 
 ![error3](lab3Screenshots/error3.png)
 
-To fix this issue, we added to the conditional statement we created from the previous iteration of our MarkdownParse.java to break out of the while loop if the next set of closed and open brackets or parentheses could not be found. This is because a link with no title is an invalid link in Markdown. When this was the case we would like to stop looking for the next set of parentheses or brackets as this is at the end of the Markdown file. The link with no title does no need to be added to the output string.
+To fix this issue, we added to the conditional statement we created from the previous iteration of our MarkdownParse.java to break out of the while loop if the next set of closed and open brackets or parentheses could not be found. This is because a link with no title is an invalid link in Markdown. When this was the case we would like to stop looking for the next set of parentheses or brackets as this is at the end of the Markdown file. The link with no title does not need to be added to the output string.
 
 The updated MarkdownParse.java
 
