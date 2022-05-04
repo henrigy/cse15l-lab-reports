@@ -20,6 +20,8 @@ Using the scp command to copy over a file from my personal machien to my remote 
 
 
 ## Copy Whole Directories with scp -r
+Previously, we only learned that the scp command can copy individual files at a time over to our remote account. However, with scp -r, we can copy entire directories over in one command. This saves both time and the amount of copying that we would have to do if we wanted to copy multiple files from the same folder.
+
 Copying over the whole markdown-parse directory to my ieng6 account:
 
 ![scprPt1](lab5Screenshots/scprPt1.png)
