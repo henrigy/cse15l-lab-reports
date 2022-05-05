@@ -49,5 +49,5 @@ Logging into my ieng6 account after copying over the entire directory and compil
 
 Combining scp, ;, and ssh to copy over the whole directory and run the tests in one line:
 
-
+![oneLineSuccess](lab5Screenshots/oneLineSuccess.png)
 
