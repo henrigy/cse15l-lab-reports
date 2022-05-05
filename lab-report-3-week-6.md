@@ -17,7 +17,23 @@ Using the scp command to copy over a file from my personal machien to my remote 
 
 
 ## Setup GitHub Access From ieng6
+For adding, committing, and pushing to GitHub, this operation no longer accepts manual password inputs. As per the update, it requires that this process be done using a public access key. This also saves time in inputting usernames and passwords as the public access key will be stored on both the remote server and on my GitHub account.
 
+Storing public key on GitHub:
+
+![githubKey](lab5Screenshots/githubKey.png)
+
+Storing public and private keys in user account:
+
+![privatePublic](lab5Screenshots/privatePublic.png)
+
+Running git commands to commit and push a change to GitHub while logged into my ieng6 account:
+
+![gitPush](lab5Screenshots/gitPush.png)
+
+Link for the resulting commit: [https://github.com/henrigy/labReport3Demo/commit/36385ac9e6195cb25f17a3516acab3d2604eb51e](https://github.com/henrigy/labReport3Demo/commit/36385ac9e6195cb25f17a3516acab3d2604eb51e)
+
+![successLink](lab5Screenshots/successLink.png)
 
 ## Copy Whole Directories with scp -r
 Previously, we only learned that the scp command can copy individual files at a time over to our remote account. However, with scp -r, we can copy entire directories over in one command. This saves both time and the amount of copying that we would have to do if we wanted to copy multiple files from the same folder.
