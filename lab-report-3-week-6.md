@@ -11,7 +11,7 @@ The ssh command logging me into my account using just the alias that I chose:
 
 ![ieng6Login](lab5Screenshots/ieng6Login.png)
 
-Using the scp command to copy over a file from my personal machien to my remote account using just the alias that I chose:
+Using the scp command to copy over a file from my personal machine to my remote account using just the alias that I chose:
 
 ![copyOverSuccess](lab5Screenshots/copyOverSuccess.png)
 
@@ -23,7 +23,7 @@ Storing public key on GitHub:
 
 ![githubKey](lab5Screenshots/githubKey.png)
 
-Storing public and private keys in user account:
+Storing public (id_rsa.pub) and private (id_rsa) keys in user account:
 
 ![privatePublic](lab5Screenshots/privatePublic.png)
 
