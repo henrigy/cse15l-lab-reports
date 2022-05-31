@@ -4,7 +4,7 @@ Using the command vimdiff, we were able to compare the two repositories' result.
 ![vimdiffCommand](lab9Screenshots/vimdiffCommand.png)
 
 The highlighted rows identifies where the two files have differences. I then scrolled through the output to see where the differences were. For this lab report, we will be working with test files 481.md and 490.md.
-![resultDifferences](lab9Screenshots/resultDifferences.png);
+![resultDifferences](lab9Screenshots/resultDifferences.png)
 
 ## Difference #1: 481.md
 [https://github.com/nidhidhamnani/markdown-parser/blob/main/test-files/481.md](https://github.com/nidhidhamnani/markdown-parser/blob/main/test-files/481.md)
